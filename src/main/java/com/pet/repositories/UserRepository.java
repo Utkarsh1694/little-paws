@@ -2,10 +2,13 @@ package com.pet.repositories;
 
 import com.pet.entities.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepository extends MongoRepository<User, String> {
+@Repository
+public interface UserRepository extends MongoRepository<User, Integer> {
 
-    public User findUserByEmailId(String email);
+    public User findByEmailId(String email);
+
 
 
 }
