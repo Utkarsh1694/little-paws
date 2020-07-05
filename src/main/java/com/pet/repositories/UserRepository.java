@@ -10,7 +10,7 @@ public interface UserRepository extends MongoRepository<User, Integer> {
 
     @Query("{'email : ?0'}")
     public User findByEmailId(String email);
-
+   //hi
 
 
 }
