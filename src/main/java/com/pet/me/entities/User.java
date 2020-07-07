@@ -1,10 +1,12 @@
-package com.pet.entities;
+package com.pet.me.entities;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "petDb")
 public class User {
 
-    @Id
+
     private int id;
     private String email;
     private String password;
@@ -13,13 +15,11 @@ public class User {
 
     }
 
-    public int getId() {
-        return id;
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public User(String email) {
         this.email = email;
@@ -40,7 +40,8 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "email='" + email + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

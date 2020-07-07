@@ -1,6 +1,6 @@
-package com.pet.repositories;
+package com.pet.me.repositories;
 
-import com.pet.entities.User;
+import com.pet.me.entities.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;

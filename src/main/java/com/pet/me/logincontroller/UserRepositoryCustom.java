@@ -1,4 +1,4 @@
-package com.pet.logincontroller;
+package com.pet.me.logincontroller;
 
 public interface UserRepositoryCustom {
 
